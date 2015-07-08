@@ -308,7 +308,7 @@ img {
   line-height: 1.42857;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1561,7 +1561,7 @@ output {
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -1611,22 +1611,46 @@ input[type="search"] {
     line-height: 34px; }
   /* line 192, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_forms.scss */
   input[type="date"].input-sm,
+  .input-group-sm > input[type="date"].form-control,
+  .input-group-sm > input[type="date"].input-group-addon,
+  .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm input[type="date"],
   input[type="time"].input-sm,
+  .input-group-sm > input[type="time"].form-control,
+  .input-group-sm > input[type="time"].input-group-addon,
+  .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm input[type="time"],
   input[type="datetime-local"].input-sm,
+  .input-group-sm > input[type="datetime-local"].form-control,
+  .input-group-sm > input[type="datetime-local"].input-group-addon,
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm input[type="datetime-local"],
   input[type="month"].input-sm,
+  .input-group-sm > input[type="month"].form-control,
+  .input-group-sm > input[type="month"].input-group-addon,
+  .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm input[type="month"] {
     line-height: 30px; }
   /* line 197, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_forms.scss */
   input[type="date"].input-lg,
+  .input-group-lg > input[type="date"].form-control,
+  .input-group-lg > input[type="date"].input-group-addon,
+  .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg input[type="date"],
   input[type="time"].input-lg,
+  .input-group-lg > input[type="time"].form-control,
+  .input-group-lg > input[type="time"].input-group-addon,
+  .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg input[type="time"],
   input[type="datetime-local"].input-lg,
+  .input-group-lg > input[type="datetime-local"].form-control,
+  .input-group-lg > input[type="datetime-local"].input-group-addon,
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg input[type="datetime-local"],
   input[type="month"].input-lg,
+  .input-group-lg > input[type="month"].form-control,
+  .input-group-lg > input[type="month"].input-group-addon,
+  .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg input[type="month"] {
     line-height: 46px; } }
 
@@ -1712,12 +1736,19 @@ fieldset[disabled] .checkbox label {
   min-height: 34px; }
   /* line 310, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_forms.scss */
   .form-control-static.input-lg,
-  .form-control-static.input-sm {
+  .input-group-lg > .form-control-static.form-control,
+  .input-group-lg > .form-control-static.input-group-addon,
+  .input-group-lg > .input-group-btn > .form-control-static.btn,
+  .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
+  .input-group-sm > .form-control-static.input-group-addon,
+  .input-group-sm > .input-group-btn > .form-control-static.btn {
     padding-left: 0;
     padding-right: 0; }
 
 /* line 70, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_forms.scss */
-.input-sm {
+.input-sm, .input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .btn {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -1725,13 +1756,20 @@ fieldset[disabled] .checkbox label {
   border-radius: 3px; }
 
 /* line 77, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_forms.scss */
-select.input-sm {
+select.input-sm, .input-group-sm > select.form-control,
+.input-group-sm > select.input-group-addon,
+.input-group-sm > .input-group-btn > select.btn {
   height: 30px;
   line-height: 30px; }
 
 /* line 82, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_forms.scss */
 textarea.input-sm,
-select[multiple].input-sm {
+.input-group-sm > textarea.form-control,
+.input-group-sm > textarea.input-group-addon,
+.input-group-sm > .input-group-btn > textarea.btn,
+select[multiple].input-sm, .input-group-sm > select[multiple].form-control,
+.input-group-sm > select[multiple].input-group-addon,
+.input-group-sm > .input-group-btn > select[multiple].btn {
   height: auto; }
 
 /* line 327, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_forms.scss */
@@ -1761,7 +1799,9 @@ select[multiple].input-sm {
   line-height: 1.5; }
 
 /* line 70, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_forms.scss */
-.input-lg {
+.input-lg, .input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -1769,13 +1809,20 @@ select[multiple].input-sm {
   border-radius: 6px; }
 
 /* line 77, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_forms.scss */
-select.input-lg {
+select.input-lg, .input-group-lg > select.form-control,
+.input-group-lg > select.input-group-addon,
+.input-group-lg > .input-group-btn > select.btn {
   height: 46px;
   line-height: 46px; }
 
 /* line 82, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_forms.scss */
 textarea.input-lg,
-select[multiple].input-lg {
+.input-group-lg > textarea.form-control,
+.input-group-lg > textarea.input-group-addon,
+.input-group-lg > .input-group-btn > textarea.btn,
+select[multiple].input-lg, .input-group-lg > select[multiple].form-control,
+.input-group-lg > select[multiple].input-group-addon,
+.input-group-lg > .input-group-btn > select[multiple].btn {
   height: auto; }
 
 /* line 353, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_forms.scss */
@@ -1826,6 +1873,9 @@ select[multiple].input-lg {
 
 /* line 406, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_forms.scss */
 .input-lg + .form-control-feedback,
+.input-group-lg > .form-control + .form-control-feedback,
+.input-group-lg > .input-group-addon + .form-control-feedback,
+.input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
   width: 46px;
@@ -1834,6 +1884,9 @@ select[multiple].input-lg {
 
 /* line 413, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_forms.scss */
 .input-sm + .form-control-feedback,
+.input-group-sm > .form-control + .form-control-feedback,
+.input-group-sm > .input-group-addon + .form-control-feedback,
+.input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
   width: 30px;
@@ -2067,12 +2120,12 @@ select[multiple].input-lg {
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
-  border-radius: 4px;
+  border-radius: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2252,26 +2305,26 @@ fieldset[disabled] a.btn {
 /* line 75, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_buttons.scss */
 .btn-success {
   color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c; }
+  background-color: #7eb73d;
+  border-color: #71a437; }
   /* line 12, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_buttons.scss */
   .btn-success:focus,
   .btn-success.focus {
     color: #fff;
-    background-color: #449d44;
-    border-color: #255625; }
+    background-color: #649130;
+    border-color: #2f4417; }
   /* line 17, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_buttons.scss */
   .btn-success:hover {
     color: #fff;
-    background-color: #449d44;
-    border-color: #398439; }
+    background-color: #649130;
+    border-color: #517627; }
   /* line 24, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_buttons.scss */
   .btn-success:active,
   .btn-success.active,
   .open > .btn-success.dropdown-toggle {
     color: #fff;
-    background-color: #449d44;
-    border-color: #398439; }
+    background-color: #649130;
+    border-color: #517627; }
     /* line 31, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_buttons.scss */
     .btn-success:active:hover,
     .btn-success:active:focus,
@@ -2283,8 +2336,8 @@ fieldset[disabled] a.btn {
     .open > .btn-success.dropdown-toggle:focus,
     .open > .btn-success.dropdown-toggle.focus {
       color: #fff;
-      background-color: #398439;
-      border-color: #255625; }
+      background-color: #517627;
+      border-color: #2f4417; }
   /* line 39, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_buttons.scss */
   .btn-success:active,
   .btn-success.active,
@@ -2309,11 +2362,11 @@ fieldset[disabled] a.btn {
   fieldset[disabled] .btn-success.focus,
   fieldset[disabled] .btn-success:active,
   fieldset[disabled] .btn-success.active {
-    background-color: #5cb85c;
-    border-color: #4cae4c; }
+    background-color: #7eb73d;
+    border-color: #71a437; }
   /* line 56, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_buttons.scss */
   .btn-success .badge {
-    color: #5cb85c;
+    color: #7eb73d;
     background-color: #fff; }
 
 /* line 79, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_buttons.scss */
@@ -2586,6 +2639,126 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
+
+/* line 7, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate; }
+  /* line 13, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+  .input-group[class*="col-"] {
+    float: none;
+    padding-left: 0;
+    padding-right: 0; }
+  /* line 19, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+  .input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0; }
+
+/* line 56, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control {
+  display: table-cell; }
+  /* line 59, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+  .input-group-addon:not(:first-child):not(:last-child),
+  .input-group-btn:not(:first-child):not(:last-child),
+  .input-group .form-control:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+
+/* line 65, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+.input-group-addon,
+.input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle; }
+
+/* line 73, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555555;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 6px; }
+  /* line 85, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+  .input-group-addon.input-sm, .input-group-sm > .input-group-addon,
+  .input-group-sm > .input-group-btn > .input-group-addon.btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px; }
+  /* line 90, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+  .input-group-addon.input-lg, .input-group-lg > .input-group-addon,
+  .input-group-lg > .input-group-btn > .input-group-addon.btn {
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 6px; }
+  /* line 98, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+  .input-group-addon input[type="radio"],
+  .input-group-addon input[type="checkbox"] {
+    margin-top: 0; }
+
+/* line 110, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
+
+/* line 113, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+.input-group-addon:first-child {
+  border-right: 0; }
+
+/* line 122, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group > .btn,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
+
+/* line 125, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+.input-group-addon:last-child {
+  border-left: 0; }
+
+/* line 131, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+.input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap; }
+  /* line 140, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+  .input-group-btn > .btn {
+    position: relative; }
+    /* line 142, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+    .input-group-btn > .btn + .btn {
+      margin-left: -1px; }
+    /* line 148, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+    .input-group-btn > .btn:hover,
+    .input-group-btn > .btn:focus,
+    .input-group-btn > .btn:active {
+      z-index: 2; }
+  /* line 156, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+  .input-group-btn:first-child > .btn,
+  .input-group-btn:first-child > .btn-group {
+    margin-right: -1px; }
+  /* line 162, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/_input-groups.scss */
+  .input-group-btn:last-child > .btn,
+  .input-group-btn:last-child > .btn-group {
+    z-index: 2;
+    margin-left: -1px; }
 
 /* line 15, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/bootstrap/mixins/_clearfix.scss */
 .clearfix:before,
@@ -2928,8 +3101,8 @@ section.runur-section {
   /* line 18, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
   section.runur-section .content {
     width: 100%;
-    height: 60%;
-    overflow: auto;
+    height: 50%;
+    overflow: visible;
     margin: auto;
     position: absolute;
     z-index: 5;
@@ -2938,13 +3111,37 @@ section.runur-section {
     bottom: 0;
     right: 0;
     text-align: left;
-    color: #fff; }
+    color: #fff;
+    padding: 0 55% 0 14em; }
     /* line 29, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section .content .title {
-      font-size: 2.4em;
+      font-size: 2.2em;
       font-weight: 700;
       line-height: 1em; }
-  /* line 36, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 34, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    section.runur-section .content .description {
+      font-size: 1em;
+      font-weight: 400;
+      margin-top: 1.6em; }
+    /* line 39, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    section.runur-section .content .input-icon {
+      position: absolute;
+      left: -3.8em;
+      margin-top: 12px; }
+    /* line 44, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    section.runur-section .content .input-group {
+      margin-top: 1em;
+      border: 2px solid #7eb73d;
+      background-color: #7eb73d;
+      border-radius: 6px;
+      -webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2); }
+    /* line 52, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    section.runur-section .content .help-block {
+      color: #fff;
+      margin-top: 10px;
+      font-size: .9em; }
+  /* line 59, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
   section.runur-section .blobs-image {
     position: absolute;
     right: 0;
@@ -2953,11 +3150,12 @@ section.runur-section {
     width: 54%;
     z-index: 1;
     background-image: url(./assets/mid_blobs.png);
-    background-position: center left;
+    background-position: 131% center;
     background-repeat: no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 112%; }
-  /* line 48, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    -webkit-background-size: 64%;
+    background-size: 64%;
+    background-attachment: fixed; }
+  /* line 75, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
   section.runur-section .phone-container {
     position: absolute;
     left: 0;
@@ -2966,30 +3164,33 @@ section.runur-section {
     width: 100%;
     z-index: 2;
     background-repeat: no-repeat;
-    background-position: 73% 50%;
+    background-position: 75% 50%;
     background-attachment: fixed;
     -webkit-background-size: auto 80%;
     background-size: auto 80%; }
-  /* line 60, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+  /* line 87, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
   section.runur-section#section-1 {
     background-color: #faf8e4; }
-    /* line 64, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 90, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    section.runur-section#section-1 .content {
+      height: 64%; }
+    /* line 93, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section#section-1 .bg-container {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 65vh;
+      height: 70vh;
       overflow: hidden;
       background-image: url(./assets/bg_cyclist.jpg);
       -webkit-background-size: cover;
       background-size: cover;
       background-attachment: fixed;
       background-position: top center; }
-    /* line 76, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 105, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section#section-1 .phone-container {
       background-image: url(./assets/full_phone_img1.png); }
-  /* line 80, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+  /* line 109, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
   section.runur-section#section-2 {
     background-color: #faf8e4;
     background-image: url(./assets/bg_pattern.png);
@@ -2997,13 +3198,13 @@ section.runur-section {
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center; }
-    /* line 83, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 112, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section#section-2 .content {
       color: #000; }
-    /* line 86, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 115, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section#section-2 .phone-container {
       background-image: url(./assets/full_phone_img2.png); }
-  /* line 90, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+  /* line 119, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
   section.runur-section#section-3 {
     background: #e6b02b;
     /* Old browsers */
@@ -3021,7 +3222,7 @@ section.runur-section {
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
     /* IE6-9 */ }
-    /* line 92, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 121, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section#section-3 .bg-container {
       position: absolute;
       top: 0;
@@ -3033,10 +3234,10 @@ section.runur-section {
       background-size: 100% auto;
       background-repeat: no-repeat;
       background-position: center center; }
-    /* line 99, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 128, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section#section-3 .phone-container {
       background-image: url(./assets/full_phone_img3.png); }
-  /* line 103, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+  /* line 132, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
   section.runur-section#section-4 {
     background: #88a9cb;
     /* Old browsers */
@@ -3054,7 +3255,7 @@ section.runur-section {
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
     /* IE6-9 */ }
-    /* line 105, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 134, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section#section-4 .bg-container {
       position: absolute;
       top: 0;
@@ -3066,16 +3267,16 @@ section.runur-section {
       background-size: 100% auto;
       background-repeat: no-repeat;
       background-position: center center; }
-    /* line 112, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 141, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section#section-4 .phone-container {
       background-image: url(./assets/full_phone_img4.png); }
-  /* line 116, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+  /* line 145, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
   section.runur-section#section-5 {
     background-image: url(./assets/bg_cyclist.jpg);
     background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover; }
-    /* line 121, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
+    /* line 150, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/sections.scss */
     section.runur-section#section-5 .phone-container {
       background-image: url(./assets/full_phone_img5.png); }
 

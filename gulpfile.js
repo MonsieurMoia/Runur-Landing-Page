@@ -4,8 +4,11 @@
  * npm install (dependency-name) --save
  */
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+var gulp        = require('gulp');
+var sass        = require('gulp-sass');
+var concat      = require('gulp-concat');
+var uglify      = require('gulp-uglify');
+var browserify  = require('gulp-browserify');
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 
@@ -14,8 +17,8 @@ var reload      = browserSync.reload;
  * Variables
  */
 
-// var sassPath = "../../appPublic/css/sass/main.scss";
-var sassPath = "./build/sass/main.scss";
+var sassPath  = "./build/sass/main.scss";
+var jsPath  = "./build/js/index.js";
 var outputDir = "./";
 
 
@@ -50,13 +53,25 @@ gulp.task('sass', function(){
     .pipe(reload({stream: true}));
 });
 
+/**
+ * The JS Task
+ * concatenates JS files and compiles them from the JS Folder
+ */
+
+ gulp.task('js', function(){
+    return gulp.src(jsPath)
+    .pipe(browserify())
+    .pipe(uglify())
+    .pipe(gulp.dest('./'));
+ });
+
 
 /**
  * The Serve Task
  * calls other Gulp tasks
  */
 
-gulp.task('serve', ['sass'], function(){
+gulp.task('serve', ['sass','js'], function(){
 
   browserSync.init({
         server: {
@@ -65,6 +80,7 @@ gulp.task('serve', ['sass'], function(){
     });
 
   gulp.watch('./build/sass/**/*.scss' , ['sass']);
+  gulp.watch('./build/js/**/*.js' , ['js', browserSync.reload]);
   gulp.watch('./index.html').on('change', browserSync.reload);
 });
 

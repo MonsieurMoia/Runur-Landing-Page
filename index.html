@@ -20,10 +20,33 @@
 		<div class="content">
 			<h1 class="title">Introducing Runur</h1>
 			<p class="description">
-				Earn money on your own time, without letting strangers in your car! <br>
-				Logistics for the next generation. <br>
+				Earn money on your own time, without letting strangers in your car!. Logistics for the next generation.
 				Sign up now to get notified when Runur is available in your area!
 			</p>
+			<div class="col-lg-8">
+				<div class="row">
+					<form action="">
+						<div class="radio">
+					        <label>
+					          <input type="radio" name="runur-type1" id="useRunur1" value="use Runur" checked> I'm interested in <b>using</b> Runur!
+					        </label>
+					    </div>
+					    <div class="radio">
+					        <label>
+					          <input type="radio" name="runur-type1" id="beingRunur1" value="be a Runur"> I'm interested in <b>being a</b> Runur!
+					        </label>
+					    </div>
+					    <img class="input-icon" src="assets/email_icn.png">
+						<div class="input-group">
+					      	<input type="email" class="form-control" id="email1" placeholder="Enter your email address" required>
+					      	<span class="input-group-btn">
+					        	<button class="btn btn-success" id="btn-send-email1" type="submit">Send</button>
+					      	</span>
+					    </div><!-- /input-group -->
+					    <p class="help-block">We will not share your information.</p>
+					</form>
+				</div>
+			</div>
 		</div>
 		<div class="phone-container wow fadeInDown" data-wow-delay=".6s"></div>
 		<div class="blobs-image wow fadeIn"></div>
@@ -77,10 +100,36 @@
 
 	<section class="runur-section" id="section-5">
 		<div class="content">
-			<h2 class="title">Runur <br> Get it when you want it</h2>
+			<div class="logo">
+				<img src="assets/mid_logo_white.png" alt="Runur Logo, Get it when you want it">
+			</div>
 			<p class="description">
-				Sign up now to get notified when Runur is available in your area!
+				Sign up now to get notified when Runur is <br>available in your area!
 			</p>
+			<div class="col-lg-8">
+				<div class="row">
+					<form action="">
+						<div class="radio">
+					        <label>
+					          <input type="radio" name="runur-type2" id="useRunur2" value="use Runur" checked> I'm interested in <b>using</b> Runur!
+					        </label>
+					    </div>
+					    <div class="radio">
+					        <label>
+					          <input type="radio" name="runur-type2" id="beingRunur2" value="be a Runur"> I'm interested in <b>being a</b> Runur!
+					        </label>
+					    </div>
+					    <img class="input-icon" src="assets/email_icn.png">
+						<div class="input-group">
+					      	<input type="email" class="form-control" id="email2" placeholder="Enter your email address" required>
+					      	<span class="input-group-btn">
+					        	<button class="btn btn-success" id="btn-send-email2" type="submit">Send</button>
+					      	</span>
+					    </div><!-- /input-group -->
+					    <p class="help-block">We will not share your information.</p>
+					</form>
+				</div>
+			</div>
 		</div>
 		<div class="phone-container"></div>
 		<div class="blobs-image"></div>	
@@ -91,8 +140,9 @@
 			<img class="img-responsive" src="assets/foot_copyright_black.png" alt="">
 		</div>
 	</footer>
-
-	<script src="assets/wow.min.js"></script>
+	<script src="./build/js/libs/jquery.js"></script>
+	<script src="index.js"></script>
+	
 	<script>
 	 new WOW().init();
 	</script>
