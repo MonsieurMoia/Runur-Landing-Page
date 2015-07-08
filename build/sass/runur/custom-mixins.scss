@@ -1,0 +1,14 @@
+/*!
+ * Custom Mixins Styles
+ */
+
+/*
+Mixin for including same drawings pattern
+*/
+@mixin bg-pattern() {
+	background-image: url(./assets/bg_pattern.png);
+ 	-webkit-background-size: 100% auto;
+ 	background-size: 100% auto;
+ 	background-repeat: no-repeat;
+ 	background-position: center center;
+}

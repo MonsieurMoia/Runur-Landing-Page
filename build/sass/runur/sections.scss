@@ -4,11 +4,63 @@
 
  section.runur-section {
  	height: 100vh;
- 	line-height: 100vh;
  	text-align: center;
  	position: relative;
+ 	overflow: hidden;
+ 	//.absolute-center {
+	//  width: 100%;
+	//  height: 100%;
+	//  overflow: auto;
+	//  margin: auto;
+	//  position: absolute;
+	//  top: 0; left: 0; bottom: 0; right: 0;
+	//}
+	.content {
+		width: 100%;
+		height: 60%;
+		overflow: auto;
+		margin: auto;
+		position: absolute;
+		z-index: 5;
+		top: 0; left: 0; bottom: 0; right: 0;
+		text-align: left;
+		color: #fff;
+		//padding: 2.5em 55% 1.618em 4.854em;
+		.title {
+			font-size: 2.4em;
+			font-weight: 700;
+			line-height: 1em;
+		}
+	}
+
+	.blobs-image {
+		position: absolute;
+		right: 0;top: 0;
+		height: 100vh;
+		width: 54%;
+		z-index: 1;
+		background-image: url(./assets/mid_blobs.png);
+		background-position: center left;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100%;
+		background-size: 112%;
+	}
+	.phone-container {
+		position: absolute;
+		left: 0;top: 0;
+		height: 100vh;
+		width: 100%;
+		z-index: 2;
+		background-repeat: no-repeat;
+		background-position: 73% 50%;
+		background-attachment: fixed;
+		-webkit-background-size: auto 80%;
+		background-size: auto 80%;
+	}
  	&#section-1{
  		background-color: #faf8e4; 	
+ 		//background-image: url(./assets/full_phone_img1.png);
+ 		
  		.bg-container {
  			position: absolute;
  			top: 0;left: 0;
@@ -19,21 +71,57 @@
  			-webkit-background-size: cover;
  			background-size: cover;
  			background-attachment: fixed;
+ 			background-position: top center;
+ 		}
+ 		.phone-container {
+ 			background-image: url(./assets/full_phone_img1.png);
  		}
  	}
  	&#section-2{
  		background-color: #faf8e4;
+		@include bg-pattern();
+		.content {
+			color: #000;
+		}
+ 		.phone-container {
+ 			background-image: url(./assets/full_phone_img2.png);
+ 		}
  	}
  	&#section-3{
  		@include linearGradient(#e6b02b, #d58237);
+ 		.bg-container {
+ 			position: absolute;
+ 			top: 0;left: 0;
+ 			width: 100%;
+ 			height: 100%;
+ 			@include bg-pattern();
+ 		}
+ 		.phone-container {
+ 			background-image: url(./assets/full_phone_img3.png);
+ 		}
  	}
  	&#section-4{
  		@include linearGradient(#88a9cb, #5a73a9);
+ 		.bg-container {
+ 			position: absolute;
+ 			top: 0;left: 0;
+ 			width: 100%;
+ 			height: 100%;
+ 			@include bg-pattern();
+ 		}
+ 		.phone-container {
+ 			background-image: url(./assets/full_phone_img4.png);
+ 		}
  	}
  	&#section-5{
  		background-image: url(./assets/bg_cyclist.jpg);
  		background-attachment: fixed;
  		-webkit-background-size: cover;
  		background-size: cover;
+ 		.phone-container {
+ 			background-image: url(./assets/full_phone_img5.png);
+ 		}
  	}
  }
+
+
