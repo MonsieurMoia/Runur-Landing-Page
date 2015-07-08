@@ -1,0 +1,31 @@
+/*!
+ * Runur Header Styles
+ */
+
+ header {
+ 	position: fixed;
+ 	top: 0;left: 0;
+ 	height:100px;
+ 	width: 100%;
+ 	padding:25px 40px 0 20px;
+ 	z-index: 1;
+ 	.brand {
+ 		display: inline-block;
+ 		max-width: 360px;
+ 	}
+ 	.social {
+ 		display: inline-block;
+ 		float: right;
+ 		margin: 15px 0 0;
+ 		.social-link {
+			display: inline-block;
+			padding: 5px;
+			border-radius: 50px;
+			@include transition(background-color .4s);
+			&:hover {
+				background-color: rgba(255,255,255,.1);
+			}
+ 		}
+ 	}
+
+ }

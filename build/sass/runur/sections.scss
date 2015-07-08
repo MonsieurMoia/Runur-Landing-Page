@@ -1,0 +1,39 @@
+/*!
+ * Runur Sections Styles
+ */
+
+ section.runur-section {
+ 	height: 100vh;
+ 	line-height: 100vh;
+ 	text-align: center;
+ 	position: relative;
+ 	&#section-1{
+ 		background-color: #faf8e4; 	
+ 		.bg-container {
+ 			position: absolute;
+ 			top: 0;left: 0;
+ 			width: 100%;
+ 			height: 65vh;
+ 			overflow: hidden;
+ 			background-image: url(./assets/bg_cyclist.jpg);
+ 			-webkit-background-size: cover;
+ 			background-size: cover;
+ 			background-attachment: fixed;
+ 		}
+ 	}
+ 	&#section-2{
+ 		background-color: #faf8e4;
+ 	}
+ 	&#section-3{
+ 		@include linearGradient(#e6b02b, #d58237);
+ 	}
+ 	&#section-4{
+ 		@include linearGradient(#88a9cb, #5a73a9);
+ 	}
+ 	&#section-5{
+ 		background-image: url(./assets/bg_cyclist.jpg);
+ 		background-attachment: fixed;
+ 		-webkit-background-size: cover;
+ 		background-size: cover;
+ 	}
+ }

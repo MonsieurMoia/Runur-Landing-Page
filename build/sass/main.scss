@@ -1,6 +1,21 @@
 /*!
- * Runur Stylesheets
+ * General Styles
  */
 
+/*
+Custom Fonts
+*/
 @import url(http://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&subset=devanagari,latin);
+
+/*
+Css Declaration of new font,
+this will add the font to all the project
+*/
+$font-family-sans-serif:  'Rajdhani', sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+
+/*		
+Import Stylesheets
+*/
 @import "./bootstrap.scss";
+@import "./runur.scss";
