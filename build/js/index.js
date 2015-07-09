@@ -7,28 +7,43 @@ function init (){
 	var btnSendEmail1 = document.getElementById('btn-send-email1');
 	var btnSendEmail2 = document.getElementById('btn-send-email2');
 
+	var emailUsers = 'users@runur.com';
+	var emailDriver = 'drivers@runur.com';
+
 	btnSendEmail1.onclick = function(e){
 		var fromEmail = document.getElementById('email1').value;
-		console.log(fromEmail);
 		var typeOfRunur = document.querySelector('input[name="runur-type1"]:checked').value;
-		console.log(typeOfRunur);
+		
+		var toEmail;
+
 		if (fromEmail == "") {
 			alert("Please enter your email");
 		}else {
-			sendEmail(fromEmail,typeOfRunur);
+			if (typeOfRunur == 'use Runur') {
+				toEmail = emailUsers;
+			}else if(typeOfRunur == 'be a Runur'){
+				toEmail = emailDriver;
+			};
+			sendEmail(fromEmail,typeOfRunur,toEmail);
 		};
 		return false;
 	};
 
 	btnSendEmail2.onclick = function(e){
 		var fromEmail = document.getElementById('email2').value;
-		console.log(fromEmail);
 		var typeOfRunur = document.querySelector('input[name="runur-type2"]:checked').value;
-		console.log(typeOfRunur);
+		
+		var toEmail;
+
 		if (fromEmail == "") {
 			alert("Please enter your email");
 		}else {
-			sendEmail(fromEmail,typeOfRunur);
+			if (typeOfRunur == 'use Runur') {
+				toEmail = emailUsers;
+			}else if(typeOfRunur == 'be a Runur'){
+				toEmail = emailDriver;
+			};
+			sendEmail(fromEmail,typeOfRunur,toEmail);
 		};
 		return false;
 	};

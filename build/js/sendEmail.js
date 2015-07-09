@@ -1,4 +1,4 @@
-function sendEmail (fromEmail,typeOfRunur){
+function sendEmail (fromEmail,typeOfRunur,toEmail){
 	$.ajax({
 		  type: 'POST',
 		  url: 'https://mandrillapp.com/api/1.0/messages/send.json',
@@ -8,7 +8,7 @@ function sendEmail (fromEmail,typeOfRunur){
 		      'from_email': fromEmail,
 		      'to': [
 		          {
-		            'email': 'moiacr@gmail.com',
+		            'email': toEmail,
 		            'name': 'Runur',
 		            'type': 'to'
 		          }

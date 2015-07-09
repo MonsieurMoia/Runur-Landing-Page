@@ -3074,9 +3074,12 @@ header {
   /* line 16, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/header.scss */
   header .social {
     display: inline-block;
-    float: right;
-    margin: 7px 0 0; }
-    /* line 20, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/header.scss */
+    margin: 40px 40px 0 0;
+    vertical-align: top;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    /* line 23, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/header.scss */
     header .social .social-link {
       display: inline-block;
       padding: 5px;
@@ -3085,7 +3088,7 @@ header {
       -o-transition: background-color 0.4s;
       -webkit-transition: background-color 0.4s;
       transition: background-color 0.4s; }
-      /* line 25, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/header.scss */
+      /* line 28, C:/Users/Roberto/Documents/SalsaMobi/RockSauce/Runur/build/sass/runur/header.scss */
       header .social .social-link:hover {
         background-color: rgba(255, 255, 255, 0.1); }
 
