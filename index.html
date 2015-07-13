@@ -7,8 +7,25 @@
 </head>
 <body>
 
+	
+	<div class="modal fade" id="successModal">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-body text-center">
+					<div class="col-xs-4 col-xs-offset-4">
+						<img src="assets/success_icn.png" class="img-responsive" alt="">	
+					</div>
+					<div class="clearfix"></div>
+					<p class="h3 text-success">Success!</p>
+					<p>Your email has been sent.</p>
+					<button type="button" class="btn btn-success " data-dismiss="modal">Continue exploring Runur</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<header>
-		<div class="brand"><img class="img-responsive" src="./assets/head_logo_white.png"></div>
+		<div class="brand"><img class="img-responsive wow fadeIn" src="./assets/head_logo_white.png"></div>
 		<div class="social">
 			<a href="" class="social-link"><img src="assets/head_sm_white-1fb.png" alt="Go to Runur's Facebook"></a>
 			<a href="" class="social-link"><img src="assets/head_sm_white-2tw.png" alt="Go to Runur's Twitter"></a>
@@ -48,7 +65,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="phone-container wow fadeInDown" data-wow-delay=".6s"></div>
+		<div class="phone-container wow fadeIn"></div>
 		<div class="blobs-image wow fadeIn"></div>
 		<div class="bg-container"></div>
 	</section>
@@ -58,8 +75,8 @@
 			<div class="logo">
 				<img src="assets/mid_logo_orange.png" alt="Runur Logo, Get it when you want it">
 			</div>
-			<h2 class="title">Quit Guessing when your Package Will Arrive</h2>
-			<p class="description">
+			<h2 class="title wow fadeIn" data-wow-delay=".5s">Quit Guessing when your Package Will Arrive</h2>
+			<p class="description wow fadeIn" data-wow-delay=".8s">
 				Runur allows you to send and receive a package instantly, and the ability to track that package live on the map the entire time! There’s even an estimated time for your Runur!
 			</p>
 		</div>
@@ -136,6 +153,8 @@
 		<div class="blobs-image"></div>	
 	</section>
 
+
+
 	<footer>
 		<div class="copyright">		
 			<img class="img-responsive" src="assets/foot_copyright_black.png" alt="">
@@ -143,10 +162,9 @@
 	</footer>
 	<script src="./build/js/libs/jquery.js"></script>
 	<script src="index.js"></script>
-	
 	<script>
-	 new WOW().init();
+ 		new WOW().init();
 	</script>
-	
+
 </body>
 </html>

@@ -2,8 +2,13 @@
 
 var sendEmail = require('./sendEmail.js');
 var wow = require('./libs/wow.min.js');
+var bootstrap = require('./libs/bootstrap.js');
 
 function init (){
+
+	wow();
+	bootstrap();
+
 	var btnSendEmail1 = document.getElementById('btn-send-email1');
 	var btnSendEmail2 = document.getElementById('btn-send-email2');
 
@@ -48,7 +53,8 @@ function init (){
 		return false;
 	};
 
-	wow();
+
+	
 }
 
 init();

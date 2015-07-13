@@ -1,3 +1,5 @@
+var showModal = require('./showModal.js');
+
 function sendEmail (fromEmail,typeOfRunur,toEmail){
 	$.ajax({
 		  type: 'POST',
@@ -19,8 +21,10 @@ function sendEmail (fromEmail,typeOfRunur,toEmail){
 		    }
 		  }
 		 }).done(function(response) {
-		   console.log(response); // if you're into that sorta thing
+		   console.log(response[0].status); // if you're into that sorta thing
+		   showModal('successModal');
 		 });
+
 }
 
 module.exports = sendEmail;
